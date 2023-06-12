@@ -409,7 +409,7 @@
         var cols = this.getColsFromUrlSafely();
 
         // Load a map from the /map API endpoint
-        let url = this.mapsApiUrl + '/map/klein/' + this.patternName + '/r/' + this.getRowsFromUrlSafely() + '/c/' + this.getColsFromUrlSafely();
+        let url = this.mapsApiUrl + '/map/ii/' + this.patternName + '/r/' + this.getRowsFromUrlSafely() + '/c/' + this.getColsFromUrlSafely();
         fetch(url)
         .then(res => res.json())
         .then((mapApiResult) => {
