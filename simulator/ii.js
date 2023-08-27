@@ -904,7 +904,7 @@
         var victoryByShutout = false;
 
         if (liveCounts.liveCells1 == 0) {
-          this.whoWon = 1;
+          this.whoWon = 2;
           this.foundVictor = true;
           this.showWinnersLosers = true;
           this.handlers.buttons.run();
