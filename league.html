@@ -25,7 +25,7 @@ var mapsApiUrl = 'https://maps.golly456.life';
     <!--
         Versions:
         gollyx-ii-pelican: 614.0
-        gollyx-ii-pelican-theme: 299.1.dev0
+        gollyx-ii-pelican-theme: 614.0
     -->
 
 
@@ -95,7 +95,8 @@ var mapsApiUrl = 'https://maps.golly456.life';
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">
               Teams<span class="caret"></span>
           </a>
-          <div id="navbar-explore-dropdown-menu" class="dropdown-menu" aria-labelledby="themes">
+          <!-- dropdown right will right-align with parent element (expand to left) -->
+          <div id="navbar-explore-dropdown-menu" class="dropdown-menu dropdown-menu-right" aria-labelledby="themes">
             <div class="row" style="width: 500px;">
               <ul class="list-unstyled col-md-6">
                   <li><a class="dropdown-item" href="https://wiki.golly.life/wiki/Alewife_Arsonists">Alewife Arsonists</a></li>
@@ -158,7 +159,7 @@ var mapsApiUrl = 'https://maps.golly456.life';
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="themes">
               About<span class="caret"></span>
           </a>
-          <div id="navbar-about-dropdown-menu" class="dropdown-menu" aria-labelledby="themes">
+          <div id="navbar-about-dropdown-menu" class="dropdown-menu dropdown-menu-right" aria-labelledby="themes">
             <a class="dropdown-item" href="https://wiki.golly.life">Golly.Life Wiki</a>
             <a class="dropdown-item" href="https://wiki.golly.life/wiki/Hellmouth_II_Cup">About the Hellmouth II Cup</a>
             <a class="dropdown-item" href="https://wiki.golly.life/wiki/Hellmouth_II_Cup/Rules">Hellmouth II Cup Rules</a>
@@ -178,8 +179,6 @@ var mapsApiUrl = 'https://maps.golly456.life';
     border-bottom: none;
     font-size: 0.9375rem;
   }
-
-
 
   /* Prevent line wrapping in the team name column */
   .card .table .team-cell {
@@ -266,6 +265,7 @@ var mapsApiUrl = 'https://maps.golly456.life';
                   <th scope="col" class="text-center">W</th>
                   <th scope="col" class="text-center">L</th>
                   <th scope="col" class="text-center">Pct</th>
+                  <th scope="col" class="text-center games-left-col">GL</th>
                   <th scope="col" class="text-center">GB</th>
                   <th scope="col" class="text-center">E#</th>
                   <th scope="col" class="text-center">WCE#</th>
@@ -291,6 +291,7 @@ var mapsApiUrl = 'https://maps.golly456.life';
                   <th scope="col" class="text-center">W</th>
                   <th scope="col" class="text-center">L</th>
                   <th scope="col" class="text-center">Pct</th>
+                  <th scope="col" class="text-center games-left-col">GL</th>
                   <th scope="col" class="text-center">GB</th>
                   <th scope="col" class="text-center">E#</th>
                   <th scope="col" class="text-center">WCE#</th>
@@ -326,6 +327,7 @@ var mapsApiUrl = 'https://maps.golly456.life';
                   <th scope="col" class="text-center">W</th>
                   <th scope="col" class="text-center">L</th>
                   <th scope="col" class="text-center">Pct</th>
+                  <th scope="col" class="text-center games-left-col">GL</th>
                   <th scope="col" class="text-center">GB</th>
                   <th scope="col" class="text-center">E#</th>
                   <th scope="col" class="text-center">WCE#</th>
@@ -351,6 +353,7 @@ var mapsApiUrl = 'https://maps.golly456.life';
                   <th scope="col" class="text-center">W</th>
                   <th scope="col" class="text-center">L</th>
                   <th scope="col" class="text-center">Pct</th>
+                  <th scope="col" class="text-center games-left-col">GL</th>
                   <th scope="col" class="text-center">GB</th>
                   <th scope="col" class="text-center">E#</th>
                   <th scope="col" class="text-center">WCE#</th>
@@ -370,6 +373,12 @@ var mapsApiUrl = 'https://maps.golly456.life';
     <div class="col-lg-10">
         <hr />
         <h5>Legend</h5>
+        <ul class="list-unstyled">
+            <li><strong>GB</strong> : Games Behind</li>
+            <li><strong>GL</strong> : Games Left</li>
+            <li><strong>E#</strong> : Elimination Number (0 indicates team has been mathematically eliminated from winning the division)</li>
+            <li><strong>WCE#</strong> : Wild Card Elimination Number (0 indicates team has been mathematically eliminated from the postseason)</li>
+        </ul>
         <ul class="list-unstyled">
             <li><strong>x-</strong> : Clinched Division</li>
             <li><strong>w-</strong> : Clinched Wild Card</li>
@@ -405,7 +414,7 @@ var mapsApiUrl = 'https://maps.golly456.life';
         <p>
         Ninjas have been dispatched to track down those responsible for the downtime
         and bring them back to Hellmouth Community College to fix the site.
-        </f>
+        </p>
       </div>
     </div>
 
